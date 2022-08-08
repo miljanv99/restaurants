@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(184, 182, 182) ;
+    min-width: 1000px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label.star{
+    font-size: 14px !important;
+    padding: 0 !important;
+    
+    
+     
+}
+
+label.star.star-1, label.star.star-2, label.star.star-3, label.star.star-4{
+
+    &::before{
+        content: "\f005" !important;
+    }
+    
+}

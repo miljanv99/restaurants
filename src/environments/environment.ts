@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiURL: "https://api.yelp.com/v3/businesses/search?location=San%20Jose,%20CA%2095127&term=restaurants",
+  token: "_-yzjEZnodSuhklX1qUhAT5wCCTeEv2jM38AAHcHkrBhfRrOadDQrerXYcFkl9B0v90CLUXNbU4KqELtUQc6_HdYtKpe3CowOWRt-3vu1oGuLSPMH_0oMCnM-NPrYnYx",
+  clientID: "QCMSkaS-nmLOdv1sOg9Vqg"
 };
 
 /*

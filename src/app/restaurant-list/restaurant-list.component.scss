@@ -1,0 +1,191 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .filter-button-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .filter-buttons{
+            width: 60%;
+            display: flex;
+            overflow-x: auto;
+            button{
+                min-width: 300px;
+                margin: 10px;
+                height: 50px;
+                border: 0;
+                border-radius: 5px;
+                background: linear-gradient(89deg, rgba(37,246,189,1) 0%, rgb(37, 246, 236) 90%);
+                font-size: xx-large;
+            }
+            
+        }
+    }
+
+    .wrapper-card{
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card{
+            width: 33%;
+            height: 230px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            border: none;
+            
+
+            .card-content{
+                width: 100%;
+                height: 190px;
+                background-color: whitesmoke;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 5px;
+                border-radius: 10px;
+                box-shadow: 1px 2px 10px ;
+                .img-wrapper{
+                    width: 90px;
+
+                    img{
+                        width: 100%;
+                        margin-top: 5px;
+                    }
+                }
+                button{
+                    border: none;
+                    width: 100px;
+                    height: 25px;
+                    border-radius: 5px;
+                    background-color: white;
+                    box-shadow: 1px 2px 2px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    padding-left: 2px;
+                }
+
+               
+
+                .rating-price-wrapper{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    .spacer-price-wrapper{
+                        display: flex;
+                    }
+
+                    .rating, .price, .spacer{
+                        font-size: 30px;
+                    }
+                    .rating{
+                        p{
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+
+            button.btn-view{
+                width: 100px;
+                height: 25px;
+                font-size: 19px;
+                font-weight: 600;
+                position: absolute;
+                bottom: 22px;
+                border: 0;
+                border-radius: 5px;
+                background: linear-gradient(89deg, rgb(37, 246, 189) 0%, rgb(37, 246, 236) 90%);
+            }
+        }
+    }
+    
+}
+
+button{
+    cursor: pointer;
+}
+
+.rating{
+    display: flex;
+    align-items: center
+}
+
+
+@media screen and(max-width: 1130px) {
+   
+
+    .wrapper-card{
+        flex-direction: column !important;
+
+        .card{
+            width: 100% !important;
+            height: 195px !important;
+
+            .card-content{
+                flex-direction: row !important;
+                height: 150px !important;
+
+                .img-wrapper{
+                    margin-left: 10px;
+                    img{
+                        width: 85px !important;
+                    }
+                }
+
+                button{
+                    width: 360px !important;
+                    height: 58px !important;
+                    background-color: transparent !important;
+                    box-shadow: none !important;
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    white-space: unset !important;
+
+                    
+
+                }
+
+                .rating-price-wrapper{
+                    flex-direction: column !important;
+                    align-items: center;
+                    height: 80px;
+                    justify-content: space-between !important;
+
+                     
+
+                    .spacer-price-wrapper{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+                }
+               
+
+                
+            }
+
+            button.btn-view{
+                top: 106px;
+                left: 130px;
+
+            }
+
+            
+        }
+    }
+
+   
+    
+}
+

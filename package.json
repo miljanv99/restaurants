@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev:ssr": "ng run restaurant:serve-ssr",
+    "serve:ssr": "node dist/restaurant/server/main.js",
+    "build:ssr": "ng build && ng run restaurant:server",
+    "prerender": "ng run restaurant:prerender"
   },
   "private": true,
   "dependencies": {
@@ -17,7 +21,11 @@
     "@angular/forms": "^14.0.0",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
+    "@angular/platform-server": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@nguniversal/express-engine": "^14.0.3",
+    "express": "^4.15.2",
+    "ngx-star-rating": "^2.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -26,13 +34,18 @@
     "@angular-devkit/build-angular": "^14.0.3",
     "@angular/cli": "~14.0.3",
     "@angular/compiler-cli": "^14.0.0",
+    "@nguniversal/builders": "^14.0.3",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~4.0.0",
+    "@types/node": "^14.15.0",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.7.2"
+    "typescript": "~4.7.2",
+    "webpack": "^5.74.0",
+    "webpack-dev-server": "^4.9.3"
   }
 }
